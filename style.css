@@ -1,0 +1,310 @@
+
+        /* ... (Seu CSS permanece o mesmo) ... */
+        :root {
+            --cor-primaria: #39FF14;
+            --cor-secundaria: #1E1E1E;
+            --cor-texto: #F8F9FA;
+            --cor-texto-claro: #CED4DA;
+            --cor-fundo: #121212;
+            --sombra-leve: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --transicao-suave: all 0.3s ease-in-out;
+            --fonte-principal: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--fonte-principal);
+            color: var(--cor-texto);
+            background-color: var(--cor-fundo);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            padding: 4rem 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            color: #000000;
+            background-color: var(--cor-primaria);
+            border: none;
+            border-radius: 9999px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: var(--transicao-suave);
+            cursor: pointer;
+        }
+
+        .btn:hover, .btn:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+            outline: 2px solid var(--cor-texto);
+            outline-offset: 2px;
+        }
+        
+        .btn-hero {
+            display: block;
+            width: fit-content;
+            margin: 1rem auto 2rem;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            background-color: var(--cor-fundo);
+            z-index: 1000;
+            box-shadow: var(--sombra-leve);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding-top: 5rem;
+            padding-bottom: 3rem;
+        }
+
+        .hero-subheadline {
+            font-size: 1.1rem;
+            color: var(--cor-texto-claro);
+            margin: 1rem auto 2rem;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            width: 90%;
+            max-width: 500px;
+            height: auto;
+            margin-top: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--sombra-leve);
+        }
+
+        .benefits {
+            background-color: var(--cor-secundaria);
+        }
+
+        .benefits-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background-color: #212121;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--sombra-leve);
+            text-align: center;
+        }
+
+        .benefit-icon {
+            width: 4rem;
+            height: 4rem;
+            margin-bottom: 1rem;
+            color: var(--cor-primaria);
+        }
+
+        .social-proof {
+            text-align: center;
+        }
+
+        .testimonial {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-style: italic;
+            background-color: var(--cor-secundaria);
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+
+        .testimonial-author {
+            margin-top: 1rem;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .rating {
+            color: var(--cor-primaria);
+            font-size: 1.5rem;
+        }
+
+        .client-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .logo-placeholder {
+            width: 100px;
+            height: 50px;
+            background-color: #212121;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--cor-texto-claro);
+            font-size: 0.8rem;
+        }
+        
+        .authority {
+            background-color: var(--cor-secundaria);
+            text-align: center;
+        }
+
+        .offer {
+            text-align: center;
+        }
+
+        .faq {
+            background-color: var(--cor-secundaria);
+        }
+        
+        .faq-item {
+            background-color: #212121;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: var(--sombra-leve);
+        }
+
+        .faq-item summary {
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            outline: none;
+            user-select: none;
+        }
+        
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item summary::before {
+            content: '+';
+            display: inline-block;
+            margin-right: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .faq-item[open] summary::before {
+            content: '−';
+        }
+
+        .faq-item-content {
+            padding: 0 1.5rem 1rem;
+            color: var(--cor-texto-claro);
+        }
+
+        .final-cta {
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .footer {
+            background-color: #000000;
+            color: var(--cor-texto-claro);
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--cor-primaria);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+            h1 {
+                font-size: 3.5rem;
+            }
+            h2 {
+                font-size: 2.5rem;
+            }
+            .hero-image {
+                width: 70%;
+            }
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonial {
+                max-width: 80%;
+            }
+            .faq-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1100px;
+            }
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    
